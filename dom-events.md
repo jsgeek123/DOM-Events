@@ -44,7 +44,7 @@ For example:
 ```html
 
 <form name="eventForm" method="get" action="receiveEvent.php">
-&nbsp;&nbsp;&nbsp;<input type="submit" value="Submit">
+   <input type="submit" value="Submit">
 </form>
 
 ```
