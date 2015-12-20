@@ -20,7 +20,7 @@ Event flow describes how event objects propagate through the DOM (Capturing and 
 
 ![Event Flow](https://raw.githubusercontent.com/mailtest954/DOM-Events/master/eventflow.jpg)
 
-###### Event Capturing
+##### Event Capturing
 
 In capturing phase, the event object propagates through the target's ancestors from the Window to the target's parent. Event listeners registered for this phase must handle the event before it reaches its target. In this phase, the value of event.eventPhase is 1.
 
