@@ -18,7 +18,7 @@ Event objects are dispatched (sent) to an event target which is an element in th
 
 Event flow describes how event objects propagate through the DOM (Capturing and Bubbling).
 
-![Event Flow](/eventflow.png)
+![Event Flow](https://raw.githubusercontent.com/mailtest954/DOM-Events/master/eventflow.png)
 
 ######Event Capturing
 
@@ -135,7 +135,7 @@ The **Document** interface's **createEvent** method
 
 The following chart describes the inheritance structure of the interfaces described in this specification.
 
-![Event Flow](/eventInterface.png)
+![Event Flow](https://raw.githubusercontent.com/mailtest954/DOM-Events/master/eventInterface.png)
 
 #####List of Event Types
 
