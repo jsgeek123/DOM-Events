@@ -8,7 +8,7 @@
 
 ## @ DOM Event Architecture
 
-`DOM` Events are sent to notify that something interesting have taken place. Each event is represented by an object which is an instance Event interface, and may have additional custom fields and/or functions used to get additional information about what happened.
+`DOM` Events are sent to notify that something interesting have taken place. Each event is represented by an object which is an instance of `Event` interface, and may have additional custom fields and/or functions used to get additional information about what happened.
 
 ##### $ Event Dispatch
 
@@ -22,16 +22,16 @@ Event flow describes how event objects propagate through the `DOM` ( `Capturing`
 
 ##### $ Event Capturing
 
-In capturing phase, the event object propagates through the target's ancestors from the Window to the target's parent. Event listeners registered for this phase must handle the event before it reaches its target. In this phase, the value of `event.eventPhase` is 1.
+In capturing phase, the `Event` object propagates through the target's ancestors from the `Window` to the target's parent. Event listeners registered for this phase must handle the event before it reaches its target. In this phase, the value of `event.eventPhase` is 1.
 
 
 ##### $ Event Target
 
-In target phase, the event object must arrive at the event object's event target. Event listeners registered for this phase must handle the event once it has reached its target. If the event type indicates that the event must not bubble, the event object must halt after completion of this phase. In this phase, the value of `event.eventPhase` is 2.
+In target phase, the `Event` object must arrive at the event object's event target. Event listeners registered for this phase must handle the event once it has reached its target. If the event type indicates that the event must not bubble, the event object must halt after completion of this phase. In this phase, the value of `event.eventPhase` is 2.
 
 ##### $ Event Bubbling
 
-In this phase, the event object propagates through the target's ancestors in reverse order, starting with the target's parent and ending with the Window. Event listeners registered for this phase must handle the event after it has reached its target. In this phase, the value of `event.eventPhase` is 3
+In this phase, the `Event` object propagates through the target's ancestors in reverse order, starting with the target's parent and ending with the `Window`. Event listeners registered for this phase must handle the event after it has reached its target. In this phase, the value of `event.eventPhase` is 3
 
 And when the value of `event.eventPhase` is 0, It means none of the above three.
 
