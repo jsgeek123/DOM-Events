@@ -16,7 +16,7 @@ Event objects are dispatched (sent) to an event target which is an element in th
 
 ##### $ Event Flow
 
-Event flow describes how event objects propagate through the DOM (Capturing and Bubbling).
+Event flow describes how event objects propagate through the `DOM` ( `Capturing` and `Bubbling` ).
 
 ![Event Flow](https://raw.githubusercontent.com/mailtest954/DOM-Events/master/eventflow.jpg)
 
