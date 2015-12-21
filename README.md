@@ -1,6 +1,6 @@
 # DOM Events
 
-DOM Events is designed with two main goals:
+`DOM` Events is designed with two main goals:
 
 1) To register event listeners and describe event flow through a tree structure.
 
@@ -8,11 +8,11 @@ DOM Events is designed with two main goals:
 
 ## @ DOM Event Architecture
 
-DOM Events are sent to notify that something interesting have taken place. Each event is represented by an object which is an instance Event interface, and may have additional custom fields and/or functions used to get additional information about what happened.
+`DOM` Events are sent to notify that something interesting have taken place. Each event is represented by an object which is an instance Event interface, and may have additional custom fields and/or functions used to get additional information about what happened.
 
 ##### $ Event Dispatch
 
-Event objects are dispatched (sent) to an event target which is an element in the DOM.
+Event objects are dispatched (sent) to an event target which is an element in the `DOM`.
 
 ##### $ Event Flow
 
