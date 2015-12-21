@@ -151,73 +151,115 @@ The following chart describes the inheritance structure of the interfaces descri
 
 #### $ Mouse Events:
 
-| Event Type    | Sync/Async | Bubbles | Event Target Types | Cancelable | Description                                                                                                                                                    |
-| ------------- | ---------- | ------- | ------------------ | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| click         | Sync       | Yes     | Element            | Yes        | The event occurs when the user clicks on an element                                                                                                            |
-| contextmenu   | Async      | Yes     | Element            | Yes        | The event occurs when the user right-clicks on an element to open a context menu	                                                                              |
-| dblclick  	| Sync       | Yes     | Element            | No         | The event occurs when the user double-clicks on an element	                                                                                                  |
-| mousedown     | Sync       | Yes     | Element            | Yes        | The event occurs when the user presses a mouse button over an element	                                                                                      |
-| mouseup       | Sync       | Yes     | Element            | Yes        | The event occurs when a user releases a mouse button over an element                                                                                           |
-| mouseout      | Sync       | Yes     | Element            | Yes        | The event occurs when a user moves the mouse pointer out of an element, or out of one of its children                                                          |
-| mouseover     | Sync	     | Yes     | Element            | Yes        | The event occurs when the pointer is moved onto an element, or onto one of its children                                                                        |
-| mousemove     | Sync       | Yes     | Element            | Yes        | The event occurs when the pointer is moving while it is over an element                                                                                        |
-| mouseleave    | Sync       | No      | Element	        | No         | The event occurs when the pointer is moved out of an element                                                                                                   |
-| mouseenter    | Sync       | No      | Element	        | No         | The event occurs when the pointer is moved onto an element                                                                                                     |
-| wheel         | Async      | Yes     | Element            | Yes        | The event occurs when the user rolls the mouse wheel over an element                                                                                           |
+| Event Name    | Sync/Async | Bubbles | Event Target | Cancelable | Description                                                                                                                                                    |
+| ------------- | ---------- | ------- | ------------ | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| click         | Sync       | Yes     | Element      | Yes        | The event occurs when the user clicks on an element                                                                                                            |
+| contextmenu   | Async      | Yes     | Element      | Yes        | The event occurs when the user right-clicks on an element to open a context menu	                                                                            |
+| dblclick  	| Sync       | Yes     | Element      | No         | The event occurs when the user double-clicks on an element	                                                                                                    |
+| mousedown     | Sync       | Yes     | Element      | Yes        | The event occurs when the user presses a mouse button over an element	                                                                                        |
+| mouseup       | Sync       | Yes     | Element      | Yes        | The event occurs when a user releases a mouse button over an element                                                                                           |
+| mouseout      | Sync       | Yes     | Element      | Yes        | The event occurs when a user moves the mouse pointer out of an element, or out of one of its children                                                          |
+| mouseover     | Sync	     | Yes     | Element      | Yes        | The event occurs when the pointer is moved onto an element, or onto one of its children                                                                        |
+| mousemove     | Sync       | Yes     | Element      | Yes        | The event occurs when the pointer is moving while it is over an element                                                                                        |
+| mouseleave    | Sync       | No      | Element	  | No         | The event occurs when the pointer is moved out of an element                                                                                                   |
+| mouseenter    | Sync       | No      | Element	  | No         | The event occurs when the pointer is moved onto an element                                                                                                     |
+| wheel         | Async      | Yes     | Element      | Yes        | The event occurs when the user rolls the mouse wheel over an element                                                                                           |
 
 #### $ Keyboard Events:
 
-| Event Type    | Sync/Async | Bubbles | Event Target Types | Cancelable | Description                                                                                                                                                    |
-| ------------- | ---------- | ------- | ------------------ | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| keydown       | Sync       | Yes     | Element            | Yes        | The event occurs when the user is pressing a key	                                                                                                              |
-| keyup         | Sync       | Yes     | Element            | Yes        | The event occurs when the user releases a key	                                                                                                              |
-| keypress      | Async      | Yes     | Element            | Yes        | The event occurs when the user presses a key                                                                                                                   |
+| Event Name    | Sync/Async | Bubbles | Event Target | Cancelable | Description                                                                                                                                                    |
+| ------------- | ---------- | ------- | ------------ | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| keydown       | Sync       | Yes     | Element      | Yes        | The event occurs when the user is pressing a key	                                                                                                            |
+| keyup         | Sync       | Yes     | Element      | Yes        | The event occurs when the user releases a key	                                                                                                                |
+| keypress      | Async      | Yes     | Element      | Yes        | The event occurs when the user presses a key                                                                                                                   |
 
 #### $ Frame/Object Events:
 
-| Event Type    | Sync/Async | Bubbles | Event Target Types         | Cancelable | Description                                                                                                                                            |
-| ------------- | ---------- | ------- | -------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| abort         | Sync       | No      | Window, Element            | No         | The event occurs when the loading of a resource has been aborted                                                                                       |
-| beforeunload  | Async      | No      | Window, Document, Element  | Yes        | The event occurs before the document is about to be unloaded                                                                                           |
-| error         | Async      | Yes     | Window, Element            | No         | The event occurs when an error occurs while loading an external file                                                                                   |
-| hashchange    | Async      | Yes     | Window, Document           | Yes        | The event occurs when there has been changes to the anchor part of a URL                                                                               |
-| load          | Async      | No      | Window, Document, Element  | No         | The event occurs when an object has loaded                                                                                                             |
-| pageshow      |            | No      | Document                   | No         | The event occurs when the user navigates to a webpage and it is fired just after the load event                                                        |
-| pagehide      |            | No      | Document                   | No         | The event occurs when the user navigates away from a webpage and it is fired just after unload event                                                   |
-| resize        | Sync       | No      | Window, Element            | No         | The event occurs when the document view is resized                                                                                                     |
-| scroll        | Async      | No      | Document, Element          | No         | The event occurs when an element's scrollbar is being scrolled                                                                                         |
-| unload        | Sync       | No      | Window, Document, Element  | No         | The event occurs once a page has unloaded (for <body>)                                                                                                 |
+| Event Name    | Sync/Async | Bubbles | Event Target               | Cancelable | Description                                                                                                                                      |
+| ------------- | ---------- | ------- | -------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| abort         | Sync       | No      | Window, Element            | No         | The event occurs when the loading of a resource has been aborted                                                                                 |
+| beforeunload  | Async      | No      | Window, Document, Element  | Yes        | The event occurs before the document is about to be unloaded                                                                                     |
+| error         | Async      | Yes     | Window, Element            | No         | The event occurs when an error occurs while loading an external file                                                                             |
+| hashchange    | Async      | Yes     | Window, Document           | Yes        | The event occurs when there has been changes to the anchor part of a URL                                                                         |
+| load          | Async      | No      | Window, Document, Element  | No         | The event occurs when an object has loaded                                                                                                       |
+| pageshow      |            | No      | Document                   | No         | The event occurs when the user navigates to a webpage and it is fired just after the load event                                                  |
+| pagehide      |            | No      | Document                   | No         | The event occurs when the user navigates away from a webpage and it is fired just after unload event                                             |
+| resize        | Sync       | No      | Window, Element            | No         | The event occurs when the document view is resized                                                                                               |
+| scroll        | Async      | No      | Document, Element          | No         | The event occurs when an element's scrollbar is being scrolled                                                                                   |
+| unload        | Sync       | No      | Window, Document, Element  | No         | The event occurs once a page has unloaded (for <body>)                                                                                           |
 
 #### $ Form Events:
 
-| Event Type    | Sync/Async | Bubbles | Event Target Types         | Cancelable | Description                                                                                                                                            |
-| ------------- | ---------- | ------- | -------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| blur          | Sync       | No      | Window, Element            | No         | The event occurs when an element loses focus                                                                                                           |
-| change        | Async      | No      | Element                    | Yes        | The event occurs when the content of a form element (the selection or the checked state) have changed (for input, keygen, select, and textarea)        |
-| focus         | Sync       | No      | Window, Element            | No         | The event occurs when an element gets focus                                                                                                            |
-| focusin       | Sync       | Yes     | Window, Element            | No         | The event occurs when an element is about to get focus                                                                                                 |
-| focusout      | Sync       | Yes     | Window, Element            | No         | The event occurs when an element is about to lose focus                                                                                                |
-| input         | Async      | No      | Element                    | Yes        | The event occurs when an element gets user input                                                                                                       |
-| invalid       | Async      | No      | Element                    | Yes        | The event occurs when an element is invalid                                                                                                            |
-| reset         | Async      | Yes     | Element                    | Yes        | The event occurs when a form is reset                                                                                                                  |
-| search        |            | No      | Element                    | No         | The event occurs when the user writes something in a search field (for input of type search)                                                               |
-| select        |            | Yes     | Element                    | No         | The event occurs after the user selects some text (for input and textarea)                                                                         |
-| submit        | Async      | Yes     | Element                    | Yes        | The event occurs when a form is submitted                                                                                                              |
+| Event Name    | Sync/Async | Bubbles | Event Target         | Cancelable | Description                                                                                                                                            |
+| ------------- | ---------- | ------- | -------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| blur          | Sync       | No      | Window, Element      | No         | The event occurs when an element loses focus                                                                                                           |
+| change        | Async      | No      | Element              | Yes        | The event occurs when the content of a form element (the selection or the checked state) have changed (for input, keygen, select, and textarea)        |
+| focus         | Sync       | No      | Window, Element      | No         | The event occurs when an element gets focus                                                                                                            |
+| focusin       | Sync       | Yes     | Window, Element      | No         | The event occurs when an element is about to get focus                                                                                                 |
+| focusout      | Sync       | Yes     | Window, Element      | No         | The event occurs when an element is about to lose focus                                                                                                |
+| input         | Async      | No      | Element              | Yes        | The event occurs when an element gets user input                                                                                                       |
+| invalid       | Async      | No      | Element              | Yes        | The event occurs when an element is invalid                                                                                                            |
+| reset         | Async      | Yes     | Element              | Yes        | The event occurs when a form is reset                                                                                                                  |
+| search        |            | No      | Element              | No         | The event occurs when the user writes something in a search field (for input of type search)                                                           |
+| select        |            | Yes     | Element              | No         | The event occurs after the user selects some text (for input and textarea)                                                                             |
+| submit        | Async      | Yes     | Element              | Yes        | The event occurs when a form is submitted                                                                                                              |
 
 #### $ Drag Events:
 
-| Event Type    | Sync/Async | Bubbles | Event Target Types         | Cancelable | Description                                                                                                                                            |
-| ------------- | ---------- | ------- | -------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| drag          |
-|  |
-|  |
-|  |
-|  |
-|  |
-|  |
-|  |
-|  |
-|  |
+| Event Name    | dataTransfer                                                                                                                                | Bubbles | Event Target                                       | Cancelable | Description                                                                                      |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------ |
+| drag          | Empty                                                                                                                                       | Yes     | Source Element                                     | Yes        | The event occurs when an element is being dragged                                                |
+| dragend       | Empty                                                                                                                                       | Yes     | Source Element                                     | No         | The event occurs when the user has finished dragging an element                                  |
+| dragenter     | Empty                                                                                                                                       | Yes     | Immediate user selection or the body element       | Yes        | The event occurs when the dragged element enters the drop target                                 |
+| dragleave     | Empty                                                                                                                                       | Yes     | Previous target element                            | No         | The event occurs when the dragged element leaves the drop target                                 |
+| dragover      | Empty                                                                                                                                       | Yes     | Current target element                             | Yes        | The event occurs when the dragged element is over the drop target                                |
+| dragstart     | Contains source node unless a selection is being dragged, in which case it is empty; files returns any files included in the drag operation | Yes     | Source node                                        | Yes        | The event occurs when the user starts to drag an element                                         |
+| drop          | getData() returns data set in dragstart event; files returns any files included in the drag operation                                       | Yes     | Current target element                             | Yes        | The event occurs when the dragged element is dropped on the drop target                          |
+
+**Effects in Drag Operation:**
+
+| effectAllowed                                                                     | dropEffect  |
+| --------------------------------------------------------------------------------- | ----------- |
+| none                                                                              | none        |
+| copy, copyLink, copyMove, all                                                     | copy        |
+| link, linkMove                                                                    | link        |
+| move                                                                              | move        |
+| uninitialized when what is being dragged is a selection from a text field         | move        |
+| uninitialized when what is being dragged is a selection                           | copy        |
+| uninitialized when what is being dragged is an a element with an href attribute   | link        |
+| Any other case                                                                    | copy        |
+
+**Effect Feedback:**
+
+| Drag operation | Feedback                                                                      |
+| -------------- | ------------------------------------------------------------------------------|
+| copy           | Data will be copied if dropped here.                                          |
+| link           | Data will be linked if dropped here.                                          |
+| move           | Data will be moved if dropped here.                                           |
+| none           | No operation allowed, dropping here will cancel the drag-and-drop operation.  |
+
+#### $ Clipboard Events:
+
+| Event Name | Event Target       | Bubbles | Cancelable | Description                                                        |
+| ---------- | ------------------ | ------- | ---------- | ------------------------------------------------------------------ |
+| copy       | Document, Element  | Yes     | Yes        | The event occurs when the user copies the content of an element    |
+| cut        | Document, Element  | Yes     | Yes        | The event occurs when the user cuts the content of an element      |
+| paste      | Document, Element  | Yes     | Yes        | The event occurs when the user pastes some content in an element   |
+
+#### $ Print Events
+
+| Event Name   | Event Target | Bubbles | Cancelable | Description                                                                                      |
+| ------------ | ------------ | ------- | ---------- | ------------------------------------------------------------------------------------------------ |
+| afterprint   | window       | No      | No         | The event occurs when a page has started printing, or if the print dialogue box has been closed  |
+| beforeprint  | window       | No      | No         | The event occurs when a page is about to be printed                                              |
+
+#### $ Media Events
+
+
+
+
+#### $ Touch Events
+
 
 
 
