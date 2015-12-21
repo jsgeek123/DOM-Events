@@ -80,54 +80,66 @@ Event operations can throw a DOMException as specified in their method descripti
 The basic event interfaces defined in the specification are fundamental to UI Events and it must always be supported by the implementation:
 
 The Event interface and its following constants, methods and attributes:
-<br>
-&nbsp;&nbsp;&nbsp;**NONE** - constant
-<br>
-&nbsp;&nbsp;&nbsp;**CAPTURING_PHASE** - constant
-<br>
-&nbsp;&nbsp;&nbsp;**AT_TARGET** - constant
-<br>
-&nbsp;&nbsp;&nbsp;**BUBBLING_PHASE** - constant
-<br>
-&nbsp;&nbsp;&nbsp;**type** - attribute
-<br>
-&nbsp;&nbsp;&nbsp;**target** - attribute
-<br>
-&nbsp;&nbsp;&nbsp;**currentTarget** - attribute
-<br>
-&nbsp;&nbsp;&nbsp;**eventPhase** - attribute
-<br>
-&nbsp;&nbsp;&nbsp;**bubbles** - attribute
-<br>
-&nbsp;&nbsp;&nbsp;**cancelable** - attribute
-<br>
-&nbsp;&nbsp;&nbsp;**timeStamp** - attribute
-<br>
-&nbsp;&nbsp;&nbsp;**defaultPrevented** - attribute
-<br>
-&nbsp;&nbsp;&nbsp;**isTrusted** - attribute
-<br>
-&nbsp;&nbsp;&nbsp;**stopPropagation()** - method
-<br>
-&nbsp;&nbsp;&nbsp;**stopImmediatePropagation()** - method
-<br>
-&nbsp;&nbsp;&nbsp;**preventDefault()** - method
-<br>
-&nbsp;&nbsp;&nbsp;**initEvent()** - method
+
+```javascript
+
+**NONE** - constant
+
+**CAPTURING_PHASE** - constant
+
+**AT_TARGET** - constant
+
+**BUBBLING_PHASE** - constant
+
+**type** - attribute
+
+**target** - attribute
+
+**currentTarget** - attribute
+
+**eventPhase** - attribute
+
+**bubbles** - attribute
+
+**cancelable** - attribute
+
+**timeStamp** - attribute
+
+**defaultPrevented** - attribute
+
+**isTrusted** - attribute
+
+**stopPropagation()** - method
+
+**stopImmediatePropagation()** - method
+
+**preventDefault()** - method
+
+**initEvent()** - method
+
+```
 
 The CustomEvent interface and its following method and attribute:
-<br>
-&nbsp;&nbsp;&nbsp;**initCustomEvent()** - method
-<br>
-&nbsp;&nbsp;&nbsp;**detail** - attribute
+
+```javascript
+
+**initCustomEvent()** - method
+
+**detail** - attribute
+
+```
 
 The EventTarget interface and its following methods:
-<br>
-&nbsp;&nbsp;&nbsp;**addEventListener()** - method
-<br>
-&nbsp;&nbsp;&nbsp;**removeEventListener()** - method
-<br>
-&nbsp;&nbsp;&nbsp;**dispatchEvent()** - method
+
+```javascript
+
+**addEventListener()** - method
+
+**removeEventListener()** - method
+
+**dispatchEvent()** - method
+
+```
 
 The **EventListener** interface and its **handleEvent** method
 
