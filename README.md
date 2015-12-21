@@ -229,14 +229,14 @@ The following chart describes the inheritance structure of the interfaces descri
 | uninitialized when what is being dragged is an a element with an href attribute   | link        |
 | Any other case                                                                    | copy        |
 
-**Effect Feedback:**
+**Effect Description:**
 
-| Drag operation | Feedback                                                                      |
-| -------------- | ------------------------------------------------------------------------------|
-| copy           | Data will be copied if dropped here.                                          |
-| link           | Data will be linked if dropped here.                                          |
-| move           | Data will be moved if dropped here.                                           |
-| none           | No operation allowed, dropping here will cancel the drag-and-drop operation.  |
+| Effect Name | Description                                                                   |
+| ----------- | ------------------------------------------------------------------------------|
+| copy        | Data will be copied if dropped here.                                          |
+| link        | Data will be linked if dropped here.                                          |
+| move        | Data will be moved if dropped here.                                           |
+| none        | No operation allowed, dropping here will cancel the drag-and-drop operation.  |
 
 #### $ Clipboard Events:
 
