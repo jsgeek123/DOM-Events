@@ -83,39 +83,37 @@ The Event interface and its following constants, methods and attributes:
 
 ```javascript
 
-NONE - constant
+event.type - attribute
 
-CAPTURING_PHASE - constant
+event.target - attribute
 
-AT_TARGET - constant
+event.currentTarget - attribute
 
-BUBBLING_PHASE - constant
+event.eventPhase - attribute
 
-type - attribute
+event.bubbles - attribute
 
-target - attribute
+event.cancelable - attribute
 
-currentTarget - attribute
+event.timeStamp - attribute
 
-eventPhase - attribute
+event.defaultPrevented - attribute
 
-bubbles - attribute
+event.isTrusted - attribute
 
-cancelable - attribute
+event.originalEvent - attribute
 
-timeStamp - attribute
+event.stopPropagation() - method
 
-defaultPrevented - attribute
+event.stopImmediatePropagation() - method
 
-isTrusted - attribute
+event.isPropagationStopped() - method
 
-stopPropagation() - method
+event.preventDefault() - method
 
-stopImmediatePropagation() - method
+event.isDefaultPrevented() - method
 
-preventDefault() - method
-
-initEvent() - method
+event.initEvent() - method
 
 ```
 
@@ -123,9 +121,9 @@ The CustomEvent interface and its following method and attribute:
 
 ```javascript
 
-initCustomEvent() - method
+event.initCustomEvent() - method
 
-detail - attribute
+event.detail - attribute
 
 ```
 
