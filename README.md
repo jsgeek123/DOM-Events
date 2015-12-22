@@ -103,6 +103,48 @@ event.isTrusted - attribute
 
 event.originalEvent - attribute
 
+event.altKey - attribute
+
+event.clientX - constant
+
+event.clientY - constant
+
+event.ctrlKey - attribute
+
+event.metaKey - attribute
+
+event.screenX - attribute
+
+event.screenY - attribute
+
+event.shiftKey - attribute
+
+event.which - constant
+
+event.charCode - constant
+
+event.key - attribute
+
+event.keyCode - constant
+
+event.persisted - attribute for PageTransition event
+
+event.relatedTarget - attribute
+
+event.animationName - attribute for Animation event
+
+event.elapsedTime - attribute for Animation and Transition event
+
+event.propertyName - attribute for Transition event
+
+event.deltaX - attribute for Mouse event (scroll amount on x-axis)
+
+event.deltaY - attribute for Mouse event (scroll amount on y-axis)
+
+event.deltaZ - attribute for Mouse event (scroll amount on z-axis)
+
+event.deltaMode - attribute for Mouse event (returns one of pixels, lines or pages)
+
 event.stopPropagation() - method
 
 event.stopImmediatePropagation() - method
@@ -255,15 +297,63 @@ The following chart describes the inheritance structure of the interfaces descri
 
 #### $ Media Events
 
+| Event Name        | Event Target     | Bubbles | Cancelable | Description                                                                                                                     |
+| ----------------- | ---------------- | ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| abort             | Audio, Video     | No      | No         | The event occurs when the loading of a media is aborted                                                                         |
+| canplay           | Audio, Video     | No      | No         | The event occurs when the browser can start playing the media (when it has buffered enough to begin)                            |
+| canplaythrough    | Audio, Video     | No      | No         | The event occurs when the browser can play through the media without stopping for buffering                                     |
+| durationchange    | Audio, Video     | No      | No         | The event occurs when the duration of the media is changed                                                                      |
+| ended             | Audio, Video     | No      | No         | The event occurs when the media has reach the end (useful for messages like "thanks for listening")                             |
+| error             | Audio, video     | No      | No         | The event occurs when an error occurred during the loading of a media file                                                      |
+| loadeddata        | Audio, Video     | No      | No         | The event occurs when media data is loaded                                                                                      |
+| loadedmetadata    | Audio, Video     | No      | No         | The event occurs when meta data (like dimensions and duration) are loaded                                                       |
+| loadstart         | Audio, Video     | No      | No         | The event occurs when the browser starts looking for the specified media                                                        |
+| pause             | Audio, Video     | No      | No         | The event occurs when the media is paused either by the user or programmatically                                                |
+| play              | Audio, Video     | No      | No         | The event occurs when the media has been started or is no longer paused                                                         |
+| playing           | Audio, Video     | No      | No         | The event occurs when the media is playing after having been paused or stopped for buffering                                    |
+| progress          | Audio, Video     | No      | No         | The event occurs when the browser is in the process of getting the media data (downloading the media)                           |
+| ratechange        | Audio, Video     | No      | No         | The event occurs when the playing speed of the media is changed                                                                 |
+| seeked            | Audio, Video     | No      | No         | The event occurs when the user is finished moving/skipping to a new position in the media                                       |
+| seeking           | Audio, Video     | No      | No         | The event occurs when the user starts moving/skipping to a new position in the media                                            |
+| stalled           | Audio, Video     | No      | No         | The event occurs when the browser is trying to get media data, but data is not available                                        |
+| suspend           | Audio, video     | No      | No         | The event occurs when the browser is intentionally not getting media data                                                       |
+| timeupdate        | Audio, Video     | No      | No         | The event occurs when the playing position has changed (like when the user fast forwards to a different point in the media)     |
+| volumechange      | Audio, Video     | No      | No         | The event occurs when the volume of the media has changed (includes setting the volume to "mute")                               |
+| waiting           | Audio, Video     | No      | No         | The event occurs when the media has paused but is expected to resume (like when the media pauses to buffer more data)           |
 
+#### $ Animation Events
 
+| Event Name          | Event Target     | Bubbles | Cancelable | Description                                            |
+| ------------------- | ---------------- | ------- | ---------- | ------------------------------------------------------ |
+| animationend        | Element          | Yes     | No         | The event occurs when a CSS animation has completed    |
+| animationiteration  | Element          | Yes     | No         | The event occurs when a CSS animation is repeated      |
+| animationstart      | Element          | Yes     | No         | The event occurs when a CSS animation has started      |
+
+#### $ Transition Events
+
+| Event Name          | Event Target     | Bubbles | Cancelable | Description                                            |
+| ------------------- | ---------------- | ------- | ---------- | ------------------------------------------------------ |
+| transitionend       | Element          | Yes     | Yes        | The event occurs when a CSS transition has completed   |
 
 #### $ Touch Events
 
+| Event Name          | Sync/Async | Event Target       | Bubbles | Cancelable | Description                                                    |
+| ------------------- | ---------- | ------------------ | ------- | ---------- | -------------------------------------------------------------- |
+| touchstart          | Sync       | Document, Element  | Yes     | Yes        | The event occurs when a finger is placed on a touch screen     |
+| touchend            | Sync       | Document, Element  | Yes     | Yes        | The event occurs when a finger is removed from a touch screen  |
+| touchmove           | Sync       | Document, Element  | Yes     | Yes        | The event occurs when a finger is dragged across the screen    |
+| touchcancel         | Sync       | Document, Element  | Yes     | No         | The event occurs when the touch is interrupted                 |
 
+#### $ Misc Events
 
-
-
+| Event Name       | Event Target     | Bubbles | Cancelable | Description                                                          |
+| ---------------- | ---------------- | ------- | ---------- | -------------------------------------------------------------------- |
+| online           | Body             | No      | No         | The event occurs when the browser starts to work online              |
+| offline          | Body             | No      | No         | The event occurs when the browser starts to work offline             |
+| show             | Menu             | No      | No         | The event occurs when a <menu> element is shown as a context menu    |
+| storage          | Window           | No      | No         | The event occurs when a Web Storage area is updated                  |
+| toggle           | Details          | No      | No         | The event occurs when the user opens or closes the <details> element |
+| DOMContentLoaded | Document         | Yes     | Yes        | The document has finished loading (but not its dependent resources)  |
 
 
 # License ([MIT](https://opensource.org/licenses/MIT))
