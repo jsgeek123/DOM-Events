@@ -350,12 +350,16 @@ The following chart describes the inheritance structure of the interfaces descri
 | ---------------- | ---------------- | ------- | ---------- | -------------------------------------------------------------------- |
 | online           | Body             | No      | No         | The event occurs when the browser starts to work online              |
 | offline          | Body             | No      | No         | The event occurs when the browser starts to work offline             |
-| show             | Menu             | No      | No         | The event occurs when a <menu> element is shown as a context menu    |
+| show             | Menu             | No      | No         | The event occurs when a menu element is shown as a context menu      |
 | storage          | Window           | No      | No         | The event occurs when a Web Storage area is updated                  |
-| toggle           | Details          | No      | No         | The event occurs when the user opens or closes the <details> element |
+| toggle           | Details          | No      | No         | The event occurs when the user opens or closes the details element   |
 | DOMContentLoaded | Document         | Yes     | Yes        | The document has finished loading (but not its dependent resources)  |
 
-**NB:** *Synchronous/Asynchronous*, *Bubble*, and *Cancelable* are browser dependents and therefor their values may change from browser to browser.
+**NB:**
+
+1) *Synchronous/Asynchronous*, *Bubble*, and *Cancelable* are browser dependents and therefor their values may change from browser to browser.
+
+2) All *Events* may not work in all browsers.
 
 # License ([MIT](https://opensource.org/licenses/MIT))
 
