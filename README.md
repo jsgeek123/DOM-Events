@@ -355,6 +355,7 @@ The following chart describes the inheritance structure of the interfaces descri
 | toggle           | Details          | No      | No         | The event occurs when the user opens or closes the <details> element |
 | DOMContentLoaded | Document         | Yes     | Yes        | The document has finished loading (but not its dependent resources)  |
 
+**NB:** *Synchronous/Asynchronous*, *Bubble*, and *Cancelable* are browser dependents and therefor their values may change from browser to browser.
 
 # License ([MIT](https://opensource.org/licenses/MIT))
 
